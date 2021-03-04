@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Cart.css'
 
 const Cart = (props) => {
@@ -37,7 +38,8 @@ const Cart = (props) => {
             <p><small>Total before tax: ${productPricing(shipping + price)}</small></p>
             <p><small>Estimated Tax: ${productPricing(tax)}</small></p>
             <p className =" total">Ordered Total: ${productPricing(price+shipping+tax)}</p>
-
+            <br/>
+            <Link to="/review"><button className="main-button">Order Review</button></Link>
         </div>
     );
 };
